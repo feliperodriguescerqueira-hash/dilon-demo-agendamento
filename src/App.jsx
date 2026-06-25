@@ -12,15 +12,15 @@ const BUSINESSES = {
     rating: 4.9,
     reviews: 312,
     hours: "Seg–Sáb · 08h às 20h",
-    accentColor: "#C8A96E",
-    accentDark: "#8B6914",
-    bgColor: "#0D0D0D",
-    cardColor: "#141414",
-    surfaceColor: "#1A1A1A",
-    textColor: "#F5F0E8",
-    mutedColor: "#6B6560",
+    accentColor: "#00F5D4",
+    accentDark: "#00A88A",
+    bgColor: "#021A36",
+    cardColor: "#052E5C",
+    surfaceColor: "#03254C",
+    textColor: "#EAF4FF",
+    mutedColor: "#7FA0C4",
     emoji: "✂️",
-    coverGradient: "linear-gradient(135deg, #1A1208 0%, #0D0D0D 50%, #121008 100%)",
+    coverGradient: "linear-gradient(135deg, #021A36 0%, #03254C 50%, #021A36 100%)",
     professionals: [
       { id:1, name:"Rafael Costa", role:"Barbeiro Master", specialty:"Degradê & Barba", avatar:"RC", rating:5.0, slots:18 },
       { id:2, name:"Diego Mendes", role:"Barbeiro Senior", specialty:"Corte Clássico", avatar:"DM", rating:4.9, slots:14 },
@@ -45,15 +45,15 @@ const BUSINESSES = {
     rating: 4.8,
     reviews: 487,
     hours: "Ter–Dom · 09h às 19h",
-    accentColor: "#E8A0A0",
-    accentDark: "#C0505A",
-    bgColor: "#0F0A0A",
-    cardColor: "#160F0F",
-    surfaceColor: "#1C1212",
-    textColor: "#F8F0F0",
-    mutedColor: "#6E5858",
+    accentColor: "#00F5D4",
+    accentDark: "#00A88A",
+    bgColor: "#021A36",
+    cardColor: "#052E5C",
+    surfaceColor: "#03254C",
+    textColor: "#EAF4FF",
+    mutedColor: "#7FA0C4",
     emoji: "💅",
-    coverGradient: "linear-gradient(135deg, #180A0A 0%, #0F0A0A 50%, #140808 100%)",
+    coverGradient: "linear-gradient(135deg, #021A36 0%, #03254C 50%, #021A36 100%)",
     professionals: [
       { id:1, name:"Ana Paula", role:"Cabeleireira Master", specialty:"Coloração & Luzes", avatar:"AP", rating:5.0, slots:12 },
       { id:2, name:"Fernanda Lima", role:"Cabeleireira Senior", specialty:"Tratamentos", avatar:"FL", rating:4.9, slots:16 },
@@ -268,52 +268,52 @@ export default function App() {
     setStep(5);
   };
 
-  // ── Business Selector ───────────────────────────────────────────────────
   if (!bizType) {
     return (
-      <div style={{ minHeight:"100vh", background:"#080808", display:"flex", flexDirection:"column", alignItems:"center", justifyContent:"center", padding:24, fontFamily:"'Segoe UI', system-ui, sans-serif" }}>
+      <div style={{ minHeight:"100vh", background:"#021A36", display:"flex", flexDirection:"column", alignItems:"center", justifyContent:"center", padding:24, fontFamily:"'Montserrat','Poppins',sans-serif" }}>
         <style>{`
+          @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@700;900&family=Poppins:wght@400;500;600&display=swap');
           @keyframes fadeIn{from{opacity:0;transform:translateY(16px)}to{opacity:1;transform:none}}
           @keyframes slideUp{from{opacity:0;transform:translateY(8px)}to{opacity:1;transform:none}}
           @keyframes pop{from{opacity:0;transform:scale(.5)}to{opacity:1;transform:scale(1)}}
           @keyframes shimmer{0%{background-position:-200% center}100%{background-position:200% center}}
-          @keyframes pulse{0%,100%{opacity:1}50%{opacity:.6}}
+          @keyframes pulse{0%,100%{opacity:1}50%{opacity:.5}}
           * { box-sizing:border-box; }
         `}</style>
 
-        {/* Dilon Tech badge */}
+        {/* Badge Dilon Tech */}
         <div style={{ marginBottom:40, textAlign:"center", animation:"fadeIn .6s ease" }}>
-          <div style={{ display:"inline-flex", alignItems:"center", gap:8, background:"#141414", border:"1px solid #2A2A2A", borderRadius:100, padding:"8px 16px", marginBottom:20 }}>
-            <div style={{ width:8, height:8, borderRadius:"50%", background:"#00E5A0", boxShadow:"0 0 8px #00E5A0" }}/>
-            <span style={{ fontSize:11, color:"#888", letterSpacing:2, textTransform:"uppercase", fontWeight:600 }}>Powered by Dilon Tech</span>
+          <div style={{ display:"inline-flex", alignItems:"center", gap:8, background:"#03254C", border:"1px solid #00F5D430", borderRadius:100, padding:"8px 18px", marginBottom:24 }}>
+            <div style={{ width:7, height:7, borderRadius:"50%", background:"#00F5D4", boxShadow:"0 0 8px #00F5D4AA", animation:"pulse 2s infinite" }}/>
+            <span style={{ fontSize:11, color:"#7FA0C4", letterSpacing:2, textTransform:"uppercase", fontWeight:600, fontFamily:"'Poppins',sans-serif" }}>Powered by Dilon Tech</span>
           </div>
-          <h1 style={{ fontSize:36, fontWeight:900, color:"#fff", margin:"0 0 8px", letterSpacing:-1 }}>
+          <h1 style={{ fontSize:34, fontWeight:900, color:"#EAF4FF", margin:"0 0 10px", letterSpacing:-1, fontFamily:"'Montserrat',sans-serif", lineHeight:1.2 }}>
             Sistema de<br/>
-            <span style={{ background:"linear-gradient(90deg, #C8A96E, #E8C990, #C8A96E)", backgroundSize:"200% auto", WebkitBackgroundClip:"text", WebkitTextFillColor:"transparent", animation:"shimmer 3s linear infinite" }}>Agendamento Online</span>
+            <span style={{ background:"linear-gradient(90deg,#00F5D4,#EAF4FF,#00F5D4)", backgroundSize:"200% auto", WebkitBackgroundClip:"text", WebkitTextFillColor:"transparent", animation:"shimmer 3s linear infinite" }}>Agendamento Online</span>
           </h1>
-          <p style={{ fontSize:14, color:"#555", margin:0 }}>Escolha o tipo de estabelecimento para demonstração</p>
+          <p style={{ fontSize:14, color:"#7FA0C4", margin:0, fontFamily:"'Poppins',sans-serif" }}>Escolha o tipo de estabelecimento para demonstração</p>
         </div>
 
+        {/* Cards de seleção */}
         <div style={{ display:"flex", gap:20, flexWrap:"wrap", justifyContent:"center", animation:"fadeIn .6s ease .2s both" }}>
           {[
-            { key:"barbearia", label:"Barbearia", sub:"Corte, barba e muito estilo", emoji:"✂️", color:"#C8A96E", bg:"#1A1208" },
-            { key:"salao", label:"Salão de Beleza", sub:"Cabelo, unhas e tratamentos", emoji:"💅", color:"#E8A0A0", bg:"#180A0A" },
+            { key:"barbearia", label:"Barbearia",        sub:"Corte, barba e muito estilo",      emoji:"✂️" },
+            { key:"salao",     label:"Salão de Beleza",  sub:"Cabelo, unhas e tratamentos",      emoji:"💅" },
           ].map(opt => (
-            <button key={opt.key} onClick={() => setBizType(opt.key)} style={{ width:240, background:`linear-gradient(135deg, ${opt.bg}, #0D0D0D)`, border:`1px solid ${opt.color}33`, borderRadius:20, padding:"32px 24px", cursor:"pointer", textAlign:"center", transition:"all .25s", position:"relative", overflow:"hidden" }}
-              onMouseEnter={e => { e.currentTarget.style.transform="translateY(-4px)"; e.currentTarget.style.borderColor=opt.color+"88"; e.currentTarget.style.boxShadow=`0 20px 40px ${opt.color}20`; }}
-              onMouseLeave={e => { e.currentTarget.style.transform="translateY(0)"; e.currentTarget.style.borderColor=opt.color+"33"; e.currentTarget.style.boxShadow="none"; }}>
-              <div style={{ fontSize:52, marginBottom:16 }}>{opt.emoji}</div>
-              <div style={{ fontSize:18, fontWeight:800, color:"#fff", marginBottom:6 }}>{opt.label}</div>
-              <div style={{ fontSize:12, color:"#666", lineHeight:1.5 }}>{opt.sub}</div>
-              <div style={{ position:"absolute", bottom:16, left:"50%", transform:"translateX(-50%)", fontSize:11, color:opt.color, fontWeight:700, letterSpacing:1 }}>
-                VER DEMO →
-              </div>
+            <button key={opt.key} onClick={() => setBizType(opt.key)}
+              style={{ width:240, background:"linear-gradient(145deg,#03254C,#021A36)", border:"1px solid #00F5D430", borderRadius:20, padding:"32px 24px 28px", cursor:"pointer", textAlign:"center", transition:"all .25s", position:"relative" }}
+              onMouseEnter={e => { e.currentTarget.style.transform="translateY(-5px)"; e.currentTarget.style.borderColor="#00F5D470"; e.currentTarget.style.boxShadow="0 24px 48px #00F5D418"; }}
+              onMouseLeave={e => { e.currentTarget.style.transform="translateY(0)"; e.currentTarget.style.borderColor="#00F5D430"; e.currentTarget.style.boxShadow="none"; }}>
+              <div style={{ fontSize:50, marginBottom:18 }}>{opt.emoji}</div>
+              <div style={{ fontSize:17, fontWeight:900, color:"#EAF4FF", marginBottom:6, fontFamily:"'Montserrat',sans-serif" }}>{opt.label}</div>
+              <div style={{ fontSize:12, color:"#7FA0C4", lineHeight:1.6, fontFamily:"'Poppins',sans-serif", marginBottom:20 }}>{opt.sub}</div>
+              <div style={{ fontSize:11, color:"#00F5D4", fontWeight:700, letterSpacing:1, fontFamily:"'Poppins',sans-serif" }}>VER DEMO →</div>
             </button>
           ))}
         </div>
 
-        <p style={{ marginTop:40, fontSize:11, color:"#333", textAlign:"center", animation:"fadeIn .6s ease .4s both" }}>
-          dilon.tech · Duque de Caxias, RJ
+        <p style={{ marginTop:40, fontSize:11, color:"#3E5F84", textAlign:"center", animation:"fadeIn .6s ease .4s both", fontFamily:"'Poppins',sans-serif" }}>
+          dilontech.com.br · Duque de Caxias, RJ
         </p>
       </div>
     );
@@ -323,17 +323,19 @@ export default function App() {
   const STEPS = ["Serviço", "Profissional", "Horário", "Seus dados", "Confirmação"];
 
   return (
-    <div style={{ minHeight:"100vh", background:biz.bgColor, fontFamily:"'Segoe UI', system-ui, sans-serif", color:biz.textColor }}>
+    <div style={{ minHeight:"100vh", background:biz.bgColor, fontFamily:"'Montserrat','Poppins',sans-serif", color:biz.textColor }}>
       <style>{`
+        @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@700;900&family=Poppins:wght@400;500;600&display=swap');
         @keyframes fadeIn{from{opacity:0;transform:translateY(12px)}to{opacity:1;transform:none}}
         @keyframes slideUp{from{opacity:0;transform:translateY(8px)}to{opacity:1;transform:none}}
         @keyframes pop{from{opacity:0;transform:scale(.5)}to{opacity:1;transform:scale(1)}}
         @keyframes shimmer{0%{background-position:-200% center}100%{background-position:200% center}}
         @keyframes pulse{0%,100%{opacity:1}50%{opacity:.6}}
         *{box-sizing:border-box;}
-        input,textarea{font-family:inherit;}
+        input,textarea{font-family:'Poppins',sans-serif;}
         ::-webkit-scrollbar{width:4px;}
-        ::-webkit-scrollbar-thumb{background:#333;border-radius:4px;}
+        ::-webkit-scrollbar-thumb{background:#0E3A66;border-radius:4px;}
+        h1,h2{font-family:'Montserrat',sans-serif;}
       `}</style>
 
       {/* ── HEADER ── */}
@@ -343,7 +345,7 @@ export default function App() {
           <button onClick={() => setBizType(null)} style={{ background:"none", border:"none", color:biz.mutedColor, cursor:"pointer", fontSize:12, display:"flex", alignItems:"center", gap:4 }}>
             ← Voltar
           </button>
-          <div style={{ fontSize:10, color:biz.mutedColor, letterSpacing:2, textTransform:"uppercase" }}>
+          <div style={{ fontSize:10, color:biz.mutedColor, letterSpacing:2, textTransform:"uppercase", fontFamily:"'Poppins',sans-serif" }}>
             Dilon Tech
           </div>
           <div style={{ width:60 }} />
@@ -630,7 +632,7 @@ export default function App() {
 
           {/* Powered by */}
           <div style={{ textAlign:"center", marginTop:8 }}>
-            <span style={{ fontSize:9, color:biz.mutedColor+"60", letterSpacing:1 }}>
+            <span style={{ fontSize:9, color:biz.mutedColor+"60", letterSpacing:1, fontFamily:"'Poppins',sans-serif" }}>
               AGENDAMENTO ONLINE · DILON TECH · DUQUE DE CAXIAS, RJ
             </span>
           </div>
